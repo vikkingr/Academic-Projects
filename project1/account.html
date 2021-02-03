@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create an Account</title>
+        <link type="text/css" href="./mySite.css" rel="stylesheet">
+    </head>
+    <body id="accountPage">
+        <h1>
+            Create an Account
+        </h1>
+        <form action="https://unfinishedbusiness.app/alert.php" method="post">
+            <div>
+                <div>
+                    <label for="firstName">
+                        First Name
+                    </label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name">    
+                </div>
+                <div>
+                    <label for="lastName">
+                        Last Name
+                    </label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">    
+                </div>
+                <div>
+                    <label for="emailAddress">
+                        Email Address
+                    </label>
+                    <input type="email" name="emailAddress" id="emailAddress" placeholder="example@domain.com">
+                
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="password">
+                        Password
+                    </label>
+                    <br>
+                    <input type="password" name="password" id="password">    
+                </div>
+                <div>
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+                    <br>
+                    <input type="password" name="confirmPassword" id="confirmPassword">
+                </div>
+            </div>
+            <div>
+                <label for="birthDate">
+                    Birth Date
+                </label>
+                <br>
+                <input type="date" name="birthDate" id="birthDate" min="1970-01-01" max="2025-12-31" value="2015-10-21">
+            </div>
+            <div class="majorsDiv">
+                <fieldset>
+                    <legend>
+                        Majors
+                    </legend>
+                    <label class="majContainer" for="computerScience">
+                        <input type="radio" name="major" value="computerScience" id="computerScience">
+                        <span class="radiomark"></span>
+                        <a target="_blank" href="https://www.unf.edu/ccec/computing/Computer_Science_Program.aspx">
+                            Computer Science
+                        </a>
+                    </label>
+                    <label class="majContainer" for="informationScience">
+                        <input type="radio" name="major" value="informationScience" id="informationScience">
+                        <span class="radiomark"></span>
+                        <a target="_blank" href="https://www.unf.edu/ccec/computing/Information_Science_Program.aspx">
+                            Information Science
+                        </a>
+                    </label>
+                    <label class="majContainer" for="informationSystems">
+                        <input type="radio" name="major" value="informationSystems" id="informationSystems">
+                        <span class="radiomark"></span>
+                        <a target="_blank" href="https://www.unf.edu/ccec/computing/Information_Systems_Program.aspx">
+                            Information Systems
+                        </a>
+                    </label>
+                    <label class="majContainer" for="informationTechnology">
+                        <input type="radio" name="major" value="informationTechnology" id="informationTechnology">
+                        <span class="radiomark"></span>
+                        <a target="_blank" href="https://www.unf.edu/ccec/computing/Information_Technology_Program.aspx">
+                            Information Technology
+                        </a>
+                    </label>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>
+                        Programming Language Experience
+                    </legend>
+                    <table id="languageTable">
+                        <tr>
+                            <td>
+                                <label class="langContainer" for="language1">
+                                    <input type="checkbox" name="language1" id="language1">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/The_C_Programming_Language">C</a>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="langContainer" for="language5">
+                                    <input type="checkbox" name="language5" id="language5">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/PHP">PHP</a>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="langContainer" for="language2">
+                                    <input type="checkbox" name="language2" id="language2">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="langContainer" for="language6">
+                                    <input type="checkbox" name="language6" id="language6">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="langContainer" for="language3">
+                                    <input type="checkbox" name="language3" id="language3">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="langContainer" for="language7">
+                                    <input type="checkbox" name="language7" id="language7">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/Visual_Basic">Visual Basic</a>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="langContainer" for="language4">
+                                    <input type="checkbox" name="language4" id="language4">
+                                    <span class="checkmark"></span>
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="langContainer" for="language8">
+                                    <input type="checkbox" name="language8" id="language8">
+                                    <span class="checkmark"></span>
+                                    Other
+                                </label>
+                            </td>
+                        </tr>
+                    </table>  
+                </fieldset>
+            </div>
+            <div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+            <div>
+                <h2>
+                    Other Links
+                </h2>
+                <a href="index.html">Personal</a>
+                <a href="../index.html">ePortfolio</a>
+            </div>
+            <input type="hidden" name="username" value="464323472"/>
+            <input type="hidden" name="to_email_address" value="n01441484@unf.edu" />
+            <input type="hidden" name="to_display_name" value="Robert Veinberg-Vikking" />
+        </form>
+    </body>
+</html>

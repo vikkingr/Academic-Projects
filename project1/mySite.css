@@ -1,0 +1,265 @@
+@import "default.css";
+/* DO NOT MODIFY THE @import STATEMENT ABOVE */
+
+/* You will use this CSS file for each of your projects. Simply add new CSS classes and elements to the end of the file. */
+
+/* Be careful to keep your selector names unique to avoid collisions, which can cause confusion. */
+
+/*
+Robert Veinberg-Vikking
+1/24/2021
+*/
+
+/*************************************************************************************
+*                                                                                    *
+*                                 PERSONAL PAGE                                      *
+*                                                                                    *
+*************************************************************************************/
+
+#personalPage a:hover
+{
+    font-size: 150%;
+}
+
+.aboutMeSection h2 
+{
+    color: brown;
+}
+
+.hobbiesInterestsSection h2 
+{
+    color: rgb(139, 128, 0);
+}
+
+.educationSection h2 
+{
+    color: rgb(7, 129, 82);
+}
+
+.collegeDegree 
+{
+    font-weight: bold;
+}
+
+.HSDiploma 
+{
+    font-style: italic;
+}
+
+.certificate 
+{
+    text-decoration: underline;
+}
+
+/*************************************************************************************
+*                                                                                    *
+*                                 SCHEDULE PAGE                                      *
+*                                                                                    *
+*************************************************************************************/
+
+/* alignment and borders for schedule table */
+#schedulePage table, #schedulePage th, #schedulePage tr, #schedulePage td
+{
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+/* Black-ish background for the table */
+#schedulePage table 
+{
+    background-color: rgb(22, 22, 22);
+}
+
+/* blue header for first row */
+#schedulePage table #headerRow
+{
+    background-color: blue;
+    color: white;
+}
+
+/* Stripe */
+#schedulePage table #firstRow 
+{
+    background-color: rgb(162, 187, 212);
+}
+
+/* Middle row */
+#schedulePage table #secondRow 
+{
+    background-color: lightgrey;
+}
+
+/* Stripe */
+#schedulePage table #thirdRow 
+{
+    background-color: rgb(162, 187, 212);
+}
+
+/* 1,2,3,... for outer ol's li elements */
+#schedulePage .primaryLevelOL 
+{
+    list-style-type: decimal;
+}
+
+/* A,B,C,... for inner ol's li elements */
+#schedulePage .secondaryLevelOL
+{
+    list-style-type: upper-latin;
+}
+
+/*************************************************************************************
+*                                                                                    *
+*                                 ACCOUNT PAGE                                       *
+*                                                                                    *
+*************************************************************************************/
+
+/*
+    Checkboxes
+*/
+
+/* Container for the checkboxes and labels */
+.langContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+/* Remove default checkmark */
+.langContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Generate a custom checkmark */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.langContainer:hover input ~ .checkmark
+{
+    background-color: #ccc;
+}
+  
+/* When the checkbox is checked, add a blue background */
+.langContainer input:checked ~ .checkmark
+{
+    background-color: #2196F3;
+}
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after 
+{
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the checkmark when checked */
+.langContainer input:checked ~ .checkmark:after 
+{
+    display: block;
+}
+  
+/* Style the checkmark/indicator */
+.langContainer .checkmark:after 
+{
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*
+    Radio Buttons
+*/
+
+/* The container */
+.majContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+/* Hide the browser's default radio button */
+.majContainer input 
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+/* Create a custom radio button */
+.radiomark 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+  
+/* On mouse-over, add a grey background color */
+.majContainer:hover input ~ .radiomark 
+{
+    background-color: #ccc;
+}
+  
+/* When the radio button is checked, add a blue background */
+.majContainer input:checked ~ .radiomark 
+{
+    background-color: #18bd26;
+}
+  
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after 
+{
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the indicator (dot/circle) when checked */
+.majContainer input:checked ~ .radiomark:after 
+{
+    display: block;
+}
+  
+/* Style the indicator (dot/circle) */
+.majContainer .radiomark:after 
+{
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
