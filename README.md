@@ -9,3 +9,7 @@ The form handler may be out of service due to the school's security reasons or p
 Have a wonderful day!
 Robi
 2/2/2021
+
+# Academic-Projects >>> project2_Form_Validation
+
+This is my form validation project writted in good ol' JavaScript. 
