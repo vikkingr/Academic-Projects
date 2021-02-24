@@ -1,0 +1,315 @@
+<!--
+    Assignment: Project 2
+    Developed By: Robert Veinberg-Vikking
+    Class: COP4813
+    Instructor: Tamer Arafa
+    Date: 2/5/2021
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Processing</title>
+        <link type="text/css" href="./mySite.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body id="paymentPage">
+        <div>
+            <section>
+                <h2 id="paymentPageHeader1">Enter Payment Information</h2>
+                <div>
+                    <table id="imagesTable">
+                        <tr>
+                            <td>
+                                <img src="./images/AmEx.png">
+                            </td>
+                            <td>
+                                <img src="./images/Discover.png">
+                            </td>
+                            <td>
+                                <img src="./images/MasterCard.png">
+                            </td>
+                            <td>
+                                <img src="./images/Visa.png">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <form onSubmit="return validateForm();">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="userFName">
+                                    First Name:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userFName" id="userFName" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userLName">
+                                    Last Name:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userLName" id="userLName" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userAddress">
+                                    Address:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userAddress" id="userAddress" required>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userCity">
+                                    City:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userCity" id="userCity" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userZipcode">
+                                    Zip:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userZipcode" id="userZipcode" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userEmail">
+                                    Email Address:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userEmail" id="userEmail" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userCardName">
+                                    Name on Card:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userCardName" id="userCardName" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userCardNumber">
+                                    Card Number:&nbsp;
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userCardNumber" id="userCardNumber" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userSecCode">
+                                    <a target="_blank" href="https://en.wikipedia.org/wiki/Card_security_code">CVV2/CVCC:&nbsp;</a> 
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="userSecCode" id="userSecCode" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                State:&nbsp;
+                            </td>
+                            <td>
+                                <select name="userState" id="userState">
+                                    <option value="defaultSelectState">
+                                        Select State
+                                    </option>
+                                    <option value="alabama">
+                                        Alabama
+                                    </option>
+                                    <option value="alaska">
+                                        Alaska
+                                    </option>
+                                    <option value="arizona">
+                                        Arizona
+                                    </option>
+                                    <option value="arkansas">
+                                        Arkansas
+                                    </option>
+                                    <option value="california">
+                                        California
+                                    </option>
+                                    <option value="colorado">
+                                        Colorado
+                                    </option>
+                                    <option value="conncecticut">
+                                        Connecticut
+                                    </option>
+                                    <option value="delaware">
+                                        Delaware                                        
+                                    </option>
+                                    <option value="florida">
+                                        Florida
+                                    </option>
+                                    <option value="georgia">
+                                        Georgia
+                                    </option>
+                                    <option value="hawaii">
+                                        Hawaii
+                                    </option>
+                                    <option value="idaho">
+                                        Idaho
+                                    </option>
+                                    <option value="illinois">
+                                        Illinois
+                                    </option>
+                                    <option value="indiana">
+                                        Indiana
+                                    </option>
+                                    <option value="iowa">
+                                        Iowa
+                                    </option>
+                                    <option value="kansas">
+                                        Kansas
+                                    </option>
+                                    <option value="kentucky">
+                                        Kentucky
+                                    </option>
+                                    <option value="louisiana">
+                                        Louisiana
+                                    </option>
+                                    <option value="maine">
+                                        Maine
+                                    </option>
+                                    <option value="maryland">
+                                        Maryland
+                                    </option>
+                                    <option value="massachusetts">
+                                        Massachusetts
+                                    </option>
+                                    <option value="michigan">
+                                        Michigan
+                                    </option>
+                                    <option value="minnesota">
+                                        Minnesota
+                                    </option>
+                                    <option value="mississippi">
+                                        Mississippi
+                                    </option>
+                                    <option value="missouri">
+                                        Missouri
+                                    </option>
+                                    <option value="montana">
+                                        Montana
+                                    </option>
+                                    <option value="nebraska">
+                                        Nebraska
+                                    </option>
+                                    <option value="nevada">
+                                        Nevada
+                                    </option>
+                                    <option value="newHampshire">
+                                        New Hampshire
+                                    </option>
+                                    <option value="newJersey">
+                                        New Jersey
+                                    </option>
+                                    <option value="newMexico">
+                                        New Mexico
+                                    </option>
+                                    <option value="newYork">
+                                        New York
+                                    </option>
+                                    <option value="northCarolina">
+                                        North Carolina
+                                    </option>
+                                    <option value="northDakota">
+                                        North Dakota
+                                    </option>
+                                    <option value="ohio">
+                                        Ohio
+                                    </option>
+                                    <option value="oklahoma">
+                                        Oklahoma
+                                    </option>
+                                    <option value="oregon">
+                                        Oregon
+                                    </option>
+                                    <option value="pennsylvania">
+                                        Pennsylvania
+                                    </option>
+                                    <option value="rhodeIsland">
+                                        Rhode Island
+                                    </option>
+                                    <option value="southCarolina">
+                                        South Carolina
+                                    </option>
+                                    <option value="southDakota">
+                                        South Dakota
+                                    </option>
+                                    <option value="tennessee">
+                                        Tennessee
+                                    </option>
+                                    <option value="texas">
+                                        Texas
+                                    </option>
+                                    <option value="utah">
+                                        Utah
+                                    </option>
+                                    <option value="vermont">
+                                        Vermont
+                                    </option>
+                                    <option value="virginia">
+                                        Virginia
+                                    </option>
+                                    <option value="washington">
+                                        Washington
+                                    </option>
+                                    <option value="westVirginia">
+                                        West Virginia
+                                    </option>
+                                    <option value="wisconsin">
+                                        Wisconsin
+                                    </option>
+                                    <option value="wyoming">
+                                        Wyoming
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Expiry:&nbsp;
+                            </td>
+                            <td>
+                                <input type="month" name="userExpiryDate" id="userExpiryDate" min="2017-01" max="2025-12" value="2020-04">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button type="submit">
+                        <img src="./images/PayNow.png" alt="PAY NOW">
+                    </button>
+                </form>
+            </section>
+            <br>
+            <section>
+                <a href="../index.html">ePortfolio</a>
+            </section>
+        </div>
+    </body>
+</html>
